@@ -1,11 +1,7 @@
-module mux2x1_nbit 
-#(
-parameter n
-)
-(
-input [n-1:0]A,B,
-input sel,
-output [n-1:0]Y
+module mux2x1_4bit ( 
+input [3:0]A,B,
+input sel, 
+output [3:0]Y 
 );
-assign Y = sel ? B : A; 	//another method other than instantiation
+assign Y = sel ? B : A;
 endmodule
